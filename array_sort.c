@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include<string.h>
 
 void sort(int *a , int n)
 {
 	int i , j , min , temp;
+	int *pTemp;
 	for(i = 0 ; i < n ; i++)
 	{
 		min = i;
@@ -15,9 +17,9 @@ void sort(int *a , int n)
 				min = temp;
 			}
 		}
-		temp = *(a+i);
-		*(a+i) = *(a+min);
-		*(a+min)=temp;
+		memcpy(pTemp,a+i,4);
+		memcpy(a+i,a+min,4);
+		memcpy(a+min,pTemp,4);
 	}
 
 }
