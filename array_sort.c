@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
 void sort(int *a , int n)
 {
@@ -19,6 +19,7 @@ void sort(int *a , int n)
 		*(a+i) = *(a+min);
 		*(a+min)=temp;
 	}
+
 }
 
 int main()
@@ -32,3 +33,6 @@ int main()
 	}
 	return 0;
 }
+
+
+
