@@ -24,9 +24,9 @@ void sort(void *a , int n , int size , int(*compar)(const void *,const void *))
 				min = temp;
 			}
 		}
-		memcpy(pTemp,a+i,size);
-		memcpy(a+i,a+min,size);
-		memcpy(a+min,pTemp,size);
+		memcpy(pTemp,a+i*size,size);
+		memcpy(a+i*size,a+min*size,size);
+		memcpy(a+min*size,pTemp,size);
 	}
 
 }
