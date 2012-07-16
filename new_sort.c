@@ -11,7 +11,7 @@ int compare(const void *p1 , const void *p2)
 void sort(void *a , int n , int size , int(*compar)(const void *,const void *))
 {
 	int i , j , min , temp;
-	int *pTemp;
+	void *pTemp = (void*)malloc(size);
 	for(i = 0 ; i < n ; i++)
 	{
 		min = i;
