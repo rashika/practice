@@ -17,7 +17,7 @@ void sort(void *a , int n , int size , int(*compar)(const void *,const void *))
 		min = i;
 		for(j = i+1 ; j < n ; j++)
 		{
-			if(*compar == 1)
+			if(compar(a+min*size,a+j*size) == 1)
 			{
 				temp = j;
 				j = min; 
